@@ -8,7 +8,7 @@ async function startServer() {
   await loadPlanetsData();
 
   server.listen(PORT, () => {
-    console.log(`running on PORT: http://${PORT}`);
+    console.log(`running on PORT: http://localhost:${PORT}`);
   });
 }
 
