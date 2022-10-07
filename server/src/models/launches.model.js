@@ -32,4 +32,20 @@ function addNewLaunch(launch) {
   );
 }
 
-module.exports = { getAllLaunches, addNewLaunch };
+function existsLaunchWithId(launchId) {
+  return launches.has(launchId);
+}
+
+function abortLaunchById(launchId) {
+  const abortedLaunch = launches.get(launchId);
+  abortedLaunch.upcoming = false;
+  abortedLaunch.success = false;
+  return abortedLaunch;
+}
+
+module.exports = {
+  getAllLaunches,
+  addNewLaunch,
+  existsLaunchWithId,
+  abortLaunchById,
+};
