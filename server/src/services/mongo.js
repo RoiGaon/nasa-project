@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+// here for the tests files
+require("dotenv").config();
 
 mongoose.connection.once("open", () => {
   console.log("MongoDB connection ready!");
